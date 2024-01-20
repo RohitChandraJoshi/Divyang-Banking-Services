@@ -1,0 +1,30 @@
+{
+  "name": "divyang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm i",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "annyang": "^2.6.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "module_name": "^1.0.0",
+    "mongoose": "^7.3.1",
+    "react-script": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5"
+  }
+}
