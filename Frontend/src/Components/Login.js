@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import TestSpeech from "./SpeechReco";
-import 'G:/Projects/Final Divyang/Divyang/Divyang/Frontend/src/css/Login.css'
+import './Styles.css'
 
 function Login() {
   const [userData, setUserData] = useState(null);

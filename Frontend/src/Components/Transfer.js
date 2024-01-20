@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Dashboard from "./Dashboard";
 import { useParams } from "react-router-dom";
 import AccountSpeech from "./MainAccountSpeech";
-import 'G:/Projects/Final Divyang/Divyang/Divyang/Frontend/src/css/Transfer.css'
+import './Styles.css'
 
 export default function Transfer() {
   const [showPopup, setShowPopup] = useState(true);

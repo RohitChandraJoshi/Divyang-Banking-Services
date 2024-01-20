@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import annyang from "annyang";
 import { useState } from "react";
-import "G:/Projects/Final Divyang/Divyang/Divyang/Frontend/src/App.css";
+import "./Styles.css"
 // import Withdrawal from "./Withdrawal";
 import Transfer from "./Transfer";
 import CheckBalance from "./Account";
