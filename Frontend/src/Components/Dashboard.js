@@ -22,7 +22,7 @@ const Dashboard = () => {
       clearTimeout(timer);
     };
   }, []);
-  const isDashboardRoute = location.pathname === `http://localhost:3000/dashboard/${id}`;
+  const isDashboardRoute = location.pathname === `/dashboard/${id}`;
   return (
     <div>
       
@@ -51,16 +51,16 @@ const Dashboard = () => {
           <img className="logo img-fluid" src="/images/bank.png" alt="" />
           <ul className="nav-bar-list">
             <li>
-              <Link to={`http://localhost:3000/dashboard/${id}`}>Dashboard</Link>
+              <Link to={`/dashboard/${id}`}>Dashboard</Link>
             </li>
             <li>
-              <Link to={`http://localhost:3000/dashboard/${id}/account`}>Account</Link>
+              <Link to={`/dashboard/${id}/account`}>Account</Link>
             </li>
             <li>
-              <Link to={`http://localhost:3000/dashboard/${id}/transfer`}>Transfer</Link>
+              <Link to={`/dashboard/${id}/transfer`}>Transfer</Link>
             </li>
             <li>
-              <Link to={`http://localhost:3000/dashboard/${id}`} onClick={handleCommandsClick}>
+              <Link to={`/dashboard/${id}`} onClick={handleCommandsClick}>
                 Commands
               </Link>
             </li>

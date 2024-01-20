@@ -40,7 +40,7 @@ function Signup({ onSubmit }) {
         )}
       <div className="form-container">
         <nav></nav>
-      <form id="form" action="http://localhost:3000/sign_up" method="post">
+      <form id="form" action="https://divyang-node.onrender.com/sign_up" method="post">
         <h1> Signup form </h1>
         <label htmlFor="usernameId">Set your username</label>
         <input

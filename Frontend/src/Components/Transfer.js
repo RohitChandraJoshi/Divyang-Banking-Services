@@ -18,7 +18,7 @@ export default function Transfer() {
   const [responseData, setResponseData] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/transfer/${id}`)
+    fetch(`https://divyang-node.onrender.com/transfer/${id}`)
       .then((res) => res.json())
       .then((data) => changeState(data.message));
   }, []);
@@ -43,7 +43,7 @@ export default function Transfer() {
         )}
       <AccountSpeech />
       <Dashboard />
-      <form action={`http://localhost:3000/transfer/${id}`} method="post" id="form" className="form-container">
+      <form action={`https://divyang-node.onrender.com/transfer/${id}`} method="post" id="form" className="form-container">
       <label htmlFor="usernameId">Enter recipient username</label>
         <input
           type="text"
