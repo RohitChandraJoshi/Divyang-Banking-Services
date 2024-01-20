@@ -35,7 +35,7 @@ app.post("/sign_up", async (req, res) => {
     password: hashedPassword,
   });
   user.save();
-  res.redirect("http://localhost:3000/login");
+  res.redirect("https://divyang-banking-services.netlify.app//login");
 });
 
 app.post("/login", async (req, res) => {
@@ -52,7 +52,7 @@ app.post("/login", async (req, res) => {
     console.log(isPasswordValid);
     console.log(foundUser.password);
     if (isPasswordValid) {
-      res.redirect(`http://localhost:3000/dashboard/${foundUser.username}`);
+      res.redirect(`https://divyang-banking-services.netlify.app//dashboard/${foundUser.username}`);
     } else console.log("Incorrect password");
   } else console.log("Error!");
 });
