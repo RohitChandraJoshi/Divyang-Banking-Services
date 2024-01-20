@@ -35,7 +35,7 @@ app.post("/sign_up", async (req, res) => {
     password: hashedPassword,
   });
   user.save();
-  res.redirect("/login");
+  res.redirect("http://localhost:3001/login");
 });
 
 app.post("/login", async (req, res) => {
@@ -52,16 +52,16 @@ app.post("/login", async (req, res) => {
     console.log(isPasswordValid);
     console.log(foundUser.password);
     if (isPasswordValid) {
-      res.redirect(`/dashboard/${foundUser.username}`);
+      res.redirect(`http://localhost:3001/dashboard/${foundUser.username}`);
     } else console.log("Incorrect password");
   } else console.log("Error!");
 });
 
-app.get("/transfer/:username", async function (req, res) {
+app.get("http://localhost:3001/transfer/:username", async function (req, res) {
   const accountInfo = await AccountDB(req.params.username);
 });
 
-app.post("/transfer/:username", async function (req, res) {
+app.post("http://localhost:3001/transfer/:username", async function (req, res) {
   console.log(req.body);
   const { balance, accountId } = await AccountDB(req.params.username);
   const currentUser = req.params.username;
@@ -94,7 +94,7 @@ app.post("/transfer/:username", async function (req, res) {
   }
 });
 
-app.get("/account/:username", async function (req, res) {
+app.get("http://localhost:3001/account/:username", async function (req, res) {
   const accountInfo = await AccountDB(req.params.username);
   return res.json(accountInfo);
 });

@@ -8,7 +8,7 @@ function Login() {
   const [showPopup, setShowPopup] = useState(true);
   async function onLoginClick(event) {
     console.log(event);
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("https://divyang-node.onrender.com/login", {
       method: "POST",
     })
       .then((response) => response.json())
@@ -50,7 +50,7 @@ function Login() {
       <div className="row">
         <div className="col-md-4">
           <h1>Login</h1>
-          <form id="form" action="http://localhost:3000/login" method="post">
+          <form id="form" action="https://divyang-node.onrender.com/login" method="post">
             <div className="form-group" controlId="usernameId">
               <label htmlFor="name">User name</label>
               <input

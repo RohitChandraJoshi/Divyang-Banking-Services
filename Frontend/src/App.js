@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./Components/Home";
-import { useState, useEffect } from "react";
+
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
 import Dashboard from "./Components/Dashboard";
@@ -12,12 +12,7 @@ import Help from "./Components/Help";
 import Help1 from "./Components/Help1";
 
 function App() {
-  const [message, sendMessage] = useState("");
-  useEffect(() => {
-    fetch("http://localhost:3000/")
-      .then((res) => res.json())
-      .then((data) => sendMessage(data.message));
-  }, []);
+
 
   return (
     <div>
