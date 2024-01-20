@@ -19,7 +19,7 @@ app.use(express.static("client/my-app/build"));
 app.use(cors());
 const PORT = process.env.PORT || 3000; 
 
-app.post("/sign_up", async (req, res) => {
+app.post("http://localhost:3000/sign_up", async (req, res) => {
   console.log(req.body);
   const username = req.body.username;
   const email = req.body.email;
@@ -38,7 +38,7 @@ app.post("/sign_up", async (req, res) => {
   res.redirect("http://localhost:3000/login");
 });
 
-app.post("/login", async (req, res) => {
+app.post("http://localhost:3000/login", async (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
 
@@ -57,7 +57,7 @@ app.post("/login", async (req, res) => {
   } else console.log("Error!");
 });
 
-app.get("http://localhost:3000/transfer/:username", async function (req, res) {
+app.get("https://divyang-node.onrender.com/transfer/:username", async function (req, res) {
   const accountInfo = await AccountDB(req.params.username);
 });
 
@@ -94,7 +94,7 @@ app.post("http://localhost:3000/transfer/:username", async function (req, res) {
   }
 });
 
-app.get("http://localhost:3000/account/:username", async function (req, res) {
+app.get("https://divyang-node.onrender.com/account/:username", async function (req, res) {
   const accountInfo = await AccountDB(req.params.username);
   return res.json(accountInfo);
 });
